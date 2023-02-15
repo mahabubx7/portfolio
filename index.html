@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <!-- Icon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,18 +18,44 @@
   <!-- Header -->
   <header>
     <div class="container">
-      <!-- Toolbar -->
-      <nav id="topbar">
+      <!-- Toolbar@Mobile -->
+      <nav id="toolbar">
         <!-- Logo -->
         <span class="logo">welcome</span> <!-- //Logo -->
         <!-- Menu Switch -->
         <span id="hamberger">
-          <span class="ham__bar"></span>
-          <span class="ham__bar"></span>
-          <span class="ham__bar"></span>
+          <i class="ri-menu-line"></i>
         </span> <!-- //Menu Switch -->
-      </nav> <!-- //Toolbar -->
+      </nav> <!-- //Toolbar@Mobile -->
     </div>
   </header> <!-- //Header -->
+
+  <main>
+    <!-- Headline -->
+    <section id="headline">
+      <div class="container">
+        <h1>
+          <span class="line1">Hey there. I'm Mahabub</span>
+          <span class="line2">I'm a software developer</span>
+        </h1>
+        <p>
+          I can help you build a product, feature or website Look through some of my work and experience! If you like what you see and have a project you need coded,
+          don't hesitate to contact me.
+        </p>
+        <ul class="social-links">
+          <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+          <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+          <li><a href="#"><i class="ri-medium-line"></i></a></li>
+          <li><a href="#"><i class="ri-github-fill"></i></a></li>
+          <li><a href="#"><img src="./assets/icons8-angellist.svg" alt="angel-list"></a></li>
+        </ul>
+        <div class="scroller-down">
+          <a href="#" id="scroll-down">
+            <i class="ri-arrow-down-s-line"></i>
+          </a>
+        </div>
+      </div>
+    </section> <!-- //Headline -->
+  </main>
 </body>
 </html>

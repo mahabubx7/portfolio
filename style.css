@@ -8,8 +8,19 @@ html { scroll-behavior: smooth; }
 body {
   background-color: #e5e5e5;
   color: #172b4d;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Inter', sans-serif;
 }
+
+a { text-decoration: none; }
 
 .container {
   width: calc(100% - 1rem);
@@ -25,18 +36,19 @@ header {
 
 .logo {
   text-transform: capitalize;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   padding: 0.5rem;
   color: #28352f;
   font-weight: 600;
 }
 
-#topbar {
+#toolbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 0.5rem;
   height: 3rem;
+  max-height: 3rem;
 }
 
 #hamberger {
@@ -46,11 +58,85 @@ header {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #28352f;
 }
 
-#hamberger .ham__bar {
-  display: inline-block;
-  width: 1rem;
-  border: 0.1rem solid #28352f;
-  border-radius: 1px;
+/* -------------------------
+======= Headline Area =======
+------------------------- */
+#headline {
+  background-color: #fff;
+  background-image: url('./assets/header-illsutration-mobile.svg');
+  min-height: calc(100vh - 50px);
+  background-repeat: no-repeat;
+}
+
+#headline,
+#headline .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#headline h1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+.line1 { color: #172b4d; }
+
+.line2 { color: #36B37E; }
+
+#headline p {
+  font-size: 1.15rem;
+  color: #28352f;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 1rem;
+  margin: 1rem auto 3rem;
+}
+
+.social-links a {
+  display: inline-flex;
+  max-width: 20px;
+  max-height: 20px;
+  color: #28352f;
+  cursor: pointer;
+}
+
+.social-links a img  {
+  width: 100%;
+  object-fit: cover;
+}
+
+.scroller-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+#scroll-down {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 0.125rem solid #e0e1e2;
+  color: #172b4d;
+  font-size: 1.5rem;
 }
