@@ -23,6 +23,7 @@ h6 {
 a { text-decoration: none; }
 
 .container {
+  max-width: 1140px;
   width: calc(100% - 1rem);
   padding: 0 0.5rem;
 }
@@ -62,14 +63,47 @@ header {
   color: #28352f;
 }
 
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#desktop-menu {
+  display: none;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  gap: 0 1rem;
+  list-style: none;
+  text-transform: capitalize;
+  padding: 1rem 0;
+}
+
+#desktop-menu a {
+  display: inline-flex;
+  padding: 1rem 1rem;
+  text-transform: capitalize;
+  color: #344563;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
 /* -------------------------
-======= Headline Area =======
+======= Headline Area ======
 ------------------------- */
 #headline {
   background-color: #fff;
   background-image: url('./assets/header-illsutration-mobile.svg');
   min-height: calc(100vh - 50px);
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
 }
 
 #headline,
@@ -91,7 +125,7 @@ header {
 
 .line1 { color: #172b4d; }
 
-.line2 { color: #36B37E; }
+.line2 { color: #36b37e; }
 
 #headline p {
   font-size: 1.15rem;
@@ -100,7 +134,7 @@ header {
   text-align: center;
 }
 
-.social-links {
+#social-links {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,15 +143,23 @@ header {
   margin: 1rem auto 3rem;
 }
 
-.social-links a {
+#social-links a {
   display: inline-flex;
   max-width: 20px;
   max-height: 20px;
-  color: #28352f;
+  color: #505f79;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.social-links a img  {
+#social-links a:hover,
+#desktop-menu a:hover {
+  color: #36b37e;
+}
+
+#social-links a:hover .custom-svg-angellist { fill: #36b37e; }
+
+#social-links a img {
   width: 100%;
   object-fit: cover;
 }
@@ -131,6 +173,7 @@ header {
 
 #scroll-down {
   display: inline-flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   width: 2rem;
@@ -139,4 +182,95 @@ header {
   border: 0.125rem solid #e0e1e2;
   color: #172b4d;
   font-size: 1.5rem;
+  transition: all 0.25s ease-in-out;
+}
+
+#scroll-down:hover {
+  background-color: #36b37e;
+  border-color: #36b37e;
+  color: white;
+}
+
+#scroll-down::after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0.1rem dotted #36b37e;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.25s ease-in-out;
+  animation: scroll-btn-animation 3s infinite;
+  animation-delay: 0s;
+}
+
+@keyframes scroll-btn-animation {
+  0% {
+    opacity: 0.25;
+    z-index: 0;
+  }
+
+  85% {
+    opacity: 1;
+    width: 300%;
+    height: 300%;
+    left: calc(100% - 200%);
+    top: calc(100% - 200%);
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* -------------------------
+======= Responsive CSS =====
+------------------------- */
+@media screen and (min-width: 768px) {
+  #desktop-menu { display: flex; }
+
+  #toolbar { display: none; }
+
+  #headline {
+    background-image: url('./assets/Header-llustration-desktop.svg');
+    min-height: 100vh;
+    background-size: cover;
+  }
+
+  #headline h1 {
+    font-size: 3rem;
+    font-weight: 800;
+  }
+
+  #headline p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  #headline .container {
+    max-width: 920px;
+    width: 80%;
+  }
+
+  #social-links {
+    margin-top: 2rem;
+  }
+
+  #social-links a {
+    max-width: 2rem;
+    max-height: 2rem;
+    font-size: 2rem;
+  }
+
+  #social-links a .fa {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+  }
 }
