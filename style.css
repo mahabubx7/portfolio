@@ -28,6 +28,40 @@ a { text-decoration: none; }
   padding: 0 0.5rem;
 }
 
+.sections {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.sections .container {
+
+}
+
+.sections h2 {
+  display: block;
+  position: relative;
+  color: #172b4d;
+  font-size: 2.25rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 700;
+  margin: 0 auto 3rem;
+}
+
+.sections h2::after {
+  display: block;
+  position: absolute;
+  content: '';
+  clear: both;
+  bottom: -1rem;
+  left: calc(50% - 1.5rem);
+  width: 3rem;
+  height: 0;
+  border: 0.15rem solid #36b37e;
+  border-radius: 1px;
+}
+
 /* -------------------------
 ======= Header Area =======
 ------------------------- */
@@ -157,8 +191,6 @@ header {
   color: #36b37e;
 }
 
-#social-links a:hover .custom-svg-angellist { fill: #36b37e; }
-
 #social-links a img {
   width: 100%;
   object-fit: cover;
@@ -168,7 +200,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
+  margin: 5rem auto 0;
 }
 
 #scroll-down {
@@ -229,12 +261,18 @@ header {
 }
 
 /* -------------------------
+===== Recent Work Area =====
+------------------------- */
+
+
+
+/* -------------------------
 ======= Responsive CSS =====
 ------------------------- */
 @media screen and (min-width: 768px) {
   #desktop-menu { display: flex; }
 
-  #toolbar { display: none; }
+  #toolbar, .sections h2::after { display: none; }
 
   #headline {
     background-image: url('./assets/Header-llustration-desktop.svg');
