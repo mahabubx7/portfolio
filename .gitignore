@@ -1,0 +1,7 @@
+# unnecessary things
+node_modules/
+
+# others
+.DS_Store
+.exe
+
