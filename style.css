@@ -60,10 +60,9 @@ a { text-decoration: none; }
   position: relative;
   color: #172b4d;
   font-size: 2.25rem;
-  text-transform: capitalize;
   text-align: center;
   font-weight: 700;
-  margin: 0 auto 3rem;
+  margin: 0 auto 1.5rem;
 }
 
 .sections h2::after {
@@ -79,7 +78,32 @@ a { text-decoration: none; }
   border-radius: 1px;
 }
 
+.sections p {
+  text-align: center;
+  font-size: 1.15rem;
+}
+
 .sections ul { list-style: none; }
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn-link,
+.btn-preview {
+  display: inline-block;
+  margin: 1.25rem auto;
+  text-align: center;
+  padding: 0.75rem;
+  background-color: #36b37f;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 0.3rem;
+  font-weight: 500;
+}
 
 /* -------------------------
 ======= Header Area =======
@@ -298,6 +322,8 @@ header {
   height: 15.75rem;
 }
 
+#works h2 { margin-bottom: 3rem; }
+
 #works h3 {
   color: #3a4a42;
   font-size: 1.5rem;
@@ -324,19 +350,42 @@ header {
   border-radius: 0.2rem;
 }
 
-.btn-container { display: flex; }
-
-.btn-preview {
-  display: inline-block;
-  margin: 1.25rem auto;
-  text-align: center;
-  padding: 0.75rem;
-  background-color: #36b37f;
-  color: #fff;
-  text-transform: capitalize;
-  border-radius: 0.3rem;
-  font-weight: 500;
+/* -------------------------
+========= About Me =========
+------------------------- */
+#about {
+  position: relative;
+  z-index: 1;
 }
+
+#about::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: -2rem;
+  right: -0.5rem;
+  width: 70px;
+  height: 110px;
+  background: url('./assets/illus-1-about-me-mobile.svg');
+  background-size: cover;
+  z-index: -1;
+}
+
+#about::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: calc(0% + 225px);
+  left: -0.1rem;
+  width: 80px;
+  height: 60px;
+  background: url('./assets/illus-2-about-mobile.svg');
+  background-size: cover;
+  background-position: top right;
+  z-index: -1;
+}
+
+#about h2::after { display: none; }
 
 /* -------------------------
 ======= Responsive CSS =====
