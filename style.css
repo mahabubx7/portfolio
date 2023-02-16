@@ -35,10 +35,18 @@ a { text-decoration: none; }
   padding: 0 0.5rem;
 }
 
+.grid { display: grid; }
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+}
+
 .sections {
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  padding: 1rem 0 3rem;
 }
 
 .sections .container {
@@ -269,6 +277,65 @@ header {
   100% {
     opacity: 0;
   }
+}
+
+/* -------------------------
+===== Recent Work Area =====
+------------------------- */
+#works .grid {
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 1rem;
+}
+
+#works .grid-item {
+  border: 0.1rem solid #d0d9d4;
+  border-radius: 0.4rem;
+}
+
+#works .grid-item .image {
+  display: block;
+  background-color: #ebf0ee;
+  height: 15.75rem;
+}
+
+#works h3 {
+  color: #3a4a42;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 600;
+  margin: 1rem auto 0.5rem;
+}
+
+#works .tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-left: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+#works .tags li {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background-color: #e0e1e2;
+  border-radius: 0.2rem;
+}
+
+.btn-container { display: flex; }
+
+.btn-preview {
+  display: inline-block;
+  margin: 1.25rem auto;
+  text-align: center;
+  padding: 0.75rem;
+  background-color: #36b37f;
+  color: #fff;
+  text-transform: capitalize;
+  border-radius: 0.3rem;
+  font-weight: 500;
 }
 
 /* -------------------------
