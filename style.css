@@ -126,6 +126,13 @@ main { overflow-x: hidden; }
   box-shadow: 0 1rem 1.5rem rgba(37, 47, 137, 0.1);
 }
 
+.btn-link:active,
+.btn-preview:active {
+  background-color: #0e975e;
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1rem 1.5rem rgba(37, 47, 137, 0.1);
+}
+
 /* -------------------------
 ======= Header Area =======
 ------------------------- */
