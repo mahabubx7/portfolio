@@ -241,9 +241,13 @@
         <h2>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
         <!-- Contact Form -->
         <form action="https://formspree.io/f/moqzdlze" id="contactForm" method="POST">
-          <input type="text" name="full_name" placeholder="Full name" required maxlength="30">
+          <fieldset id="names">
+            <input type="text" name="first_name" placeholder="First name" required maxlength="30">
+            <input type="text" name="last_name" placeholder="Last name" required maxlength="30">
+          </fieldset>
+          <input type="text" id="full_name" name="full_name" placeholder="Full name" required maxlength="30">
           <input type="email" name="email" placeholder="Email address" required>
-          <textarea name="message" id="contactMsg" maxlength="500" cols="30" rows="10" placeholder="Enter text here" required></textarea>
+          <textarea name="message" id="contactMsg" maxlength="500" cols="30" rows="5" placeholder="Enter text here" required></textarea>
           <button type="submit" class="btn btn-link">Get in touch</button>
         </form> <!-- //Contact Form -->
         <ul class="social-links">
@@ -257,5 +261,16 @@
       </div>
     </section> <!-- //Contact Me -->
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <ul class="social-links">
+      <li><a href="#"><i class="ri-github-fill"></i></a></li>
+      <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
+      <li><a href="#"><i class="fa fa-angellist"></i></a></li>
+      <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+      <li><a href="#"><i class="ri-medium-line"></i></a></li>
+    </ul>
+  </footer> <!-- //Footer -->
 </body>
 </html>

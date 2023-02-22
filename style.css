@@ -541,10 +541,30 @@ header {
 
 #contact .btn {
   font-size: 1.25rem;
-  padding: 1.25rem;
+  padding: 1rem 1.5rem;
 }
 
 #contact > p { color: #42526e; }
+
+#names { display: none; }
+
+/* -------------------------
+======== Footer CSS =======
+------------------------- */
+footer {
+  display: none;
+  margin: 0;
+  padding: 0;
+  border-top: 2px solid #e5eaf5;
+  background-color: #fff;
+}
+
+footer .social-links {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+footer a { color: #505f79; }
 
 /* -------------------------
 ======= Responsive CSS =====
@@ -628,4 +648,49 @@ header {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 1.5rem;
   }
+
+  #contact .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  #contact h2 {
+    display: inline;
+    font-size: 1.875rem;
+    padding-top: 2rem;
+    line-height: 3.25rem;
+  }
+
+  #contact form {
+    margin-right: auto;
+    min-width: 60%;
+  }
+
+  #names {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: none;
+  }
+
+  #names input {
+    display: inline-block;
+    width: 49%;
+  }
+
+  input#full_name { display: none; }
+
+  #contact .social-links,
+  #contact p {
+    display: none;
+  }
+
+  #contact .btn-link {
+    margin-left: 0;
+  }
+
+  footer { display: block; }
 }
