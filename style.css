@@ -48,7 +48,7 @@ main { overflow-x: hidden; }
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 3rem 0;
+  padding: 5rem 0;
 }
 
 .sections .container {
@@ -369,7 +369,7 @@ header {
 #works .tags li {
   font-size: 0.75rem;
   padding: 0.2rem 0.5rem;
-  background-color: #e0e1e2;
+  background-color: #ebf0ee;
   border-radius: 0.2rem;
 }
 
@@ -592,4 +592,11 @@ header {
     align-items: center;
     font-size: 1.8rem;
   }
+
+  #works .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  #works h3 { padding: 1rem; }
 }
