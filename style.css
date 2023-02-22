@@ -413,7 +413,7 @@ header {
 #about .grid {
   grid-template-columns: repeat(1, 1fr);
   grid-row-gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 3rem;
   padding-bottom: 2rem;
 }
 
@@ -467,6 +467,7 @@ header {
   font-size: 0.75rem;
   font-weight: 600;
 }
+
 
 /* -------------------------
 ======= Contact Area =======
@@ -599,4 +600,32 @@ header {
   }
 
   #works h3 { padding: 1rem; }
+
+  #about p {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.25rem;
+  }
+
+  #about::before {
+    top: 1rem;
+    right: 0;
+    width: 122px;
+    height: 135px;
+    background-size: cover;
+    background-image: url('./assets/illus-1-about-desktop.svg');
+  }
+
+  #about::after {
+    top: calc(0% + 130px);
+    left: 0;
+    width: 177px;
+    height: 100px;
+    background-image: url('./assets/illus-2-about-desktop.svg.svg');
+  }
+
+  #about .grid {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1.5rem;
+  }
 }
