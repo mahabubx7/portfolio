@@ -562,7 +562,6 @@ header {
 
   #headline h1 {
     font-size: 3rem;
-    line-height: 3.75rem;
     font-weight: 800;
   }
 
@@ -584,7 +583,6 @@ header {
     max-width: 2rem;
     max-height: 2rem;
     font-size: 2rem;
-    margin: 0 0.5rem;
   }
 
   .social-links a .fa {
