@@ -468,7 +468,6 @@ header {
   font-weight: 600;
 }
 
-
 /* -------------------------
 ======= Contact Area =======
 ------------------------- */
@@ -551,7 +550,7 @@ header {
 /* -------------------------
 ======== Footer CSS =======
 ------------------------- */
-footer {
+#footer {
   display: none;
   margin: 0;
   padding: 0;
@@ -559,12 +558,12 @@ footer {
   background-color: #fff;
 }
 
-footer .social-links {
+#footer .social-links {
   margin: 0;
   padding: 1rem 0;
 }
 
-footer a { color: #505f79; }
+#footer .social-links a { color: #505f79; }
 
 /* -------------------------
 ======= Responsive CSS =====
@@ -692,5 +691,5 @@ footer a { color: #505f79; }
     margin-left: 0;
   }
 
-  footer { display: block; }
+  #footer { display: block; }
 }
