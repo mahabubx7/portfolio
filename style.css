@@ -553,7 +553,6 @@ header {
 #footer {
   display: none;
   margin: 0;
-  padding: 0;
   border-top: 2px solid #e5eaf5;
   background-color: #fff;
 }
@@ -665,6 +664,7 @@ header {
   #contact form {
     margin-right: auto;
     min-width: 60%;
+    margin-bottom: 150px;
   }
 
   #names {
@@ -689,6 +689,41 @@ header {
 
   #contact .btn-link {
     margin-left: 0;
+  }
+
+  #contact::after {
+    width: 316px;
+    height: 450px;
+    bottom: 40px;
+    right: -113px;
+    background-image: url('./assets/illus-1-contact-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  #contact::before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 237.2px;
+    height: 328.3px;
+    bottom: 40px;
+    left: 0;
+    background-image: url('./assets/illus-2-contact-desktop.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center left;
+    z-index: -1;
+  }
+
+  #bg-element {
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 105px;
+    bottom: 100px;
+    left: 274px;
+    background-image: url('./assets/illus-3-contact-desktop.svg');
   }
 
   #footer { display: block; }
