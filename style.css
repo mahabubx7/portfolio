@@ -315,10 +315,9 @@ header {
 
   85% {
     opacity: 1;
-    width: 350%;
-    height: 350%;
-    left: -125%;
-    top: -125%;
+    transform: scale(3.5);
+    left: 0;
+    top: 0;
   }
 
   100% {
