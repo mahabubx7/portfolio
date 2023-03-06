@@ -4,7 +4,10 @@
   "description": "Portfolio is a personal portfolio website project using HTML,CSS.",
   "main": "index.js",
   "scripts": {
-    "test": "npx hint . && npx stylelint '**/*.{css,scss}'"
+    "test": "npm run test:html; npm run test:styles; npm run test:js;",
+    "test:html": "npx hint .",
+    "test:styles": "npx stylelint '**/*.{css,scss}'",
+    "test:js": "npx eslint ."
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,10 @@
   },
   "homepage": "https://github.com/mahabubx7/portfolio#readme",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.27.5",
     "hint": "^7.1.3",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
