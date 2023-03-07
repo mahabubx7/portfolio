@@ -460,10 +460,10 @@ header {
 
 #works .modal-container {
   display: block;
-  width: 65%;
-  margin: 5rem auto 0;
+  width: calc(100% - 4.5rem);
+  margin: 2rem auto 0;
   background-color: #fff;
-  padding: 2.5rem 1.5rem;
+  padding: 1.5rem;
   max-width: 768px;
 }
 
@@ -478,12 +478,20 @@ header {
   flex-direction: column;
 }
 
+#works .modal-content {
+  position: relative;
+}
+
+#works .content {
+  position: relative;
+  padding: 0;
+  padding-bottom: 5rem;
+}
+
 .modal h2::after { display: none; }
 
 #works .modal h2 {
-  display: inline;
-  font-size: 1.75rem;
-  max-width: 65%;
+  font-size: 1.5rem;
   text-align: left;
 }
 
@@ -496,27 +504,41 @@ header {
 
 #works .btns {
   display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   flex-direction: row;
-  gap: 0.25rem;
+  justify-content: space-between;
 }
 
 #works .btns .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem;
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem 1rem;
   font-size: 0.75rem;
+  gap: 0.15rem;
 }
 
-#works .btns .btn i {
+#works .btns .btn span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#works .btns i {
   font-size: 1rem;
 }
 
 #works .modal-content .control {
   display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
   margin-left: auto;
   margin-bottom: 1rem;
+  z-index: 9;
 }
 
 #works .modal p {
@@ -791,15 +813,37 @@ header {
 
   #works .modal-container {
     position: relative;
-    width: 100%;
-    margin: 0 auto;
+    width: 65%;
+    margin: 2.5rem auto 0;
+    padding: 1rem;
+  }
+
+  #works .modal-content {
     padding: 0;
+  }
+
+  #works .content {
+    padding: 1.5rem;
   }
 
   #about p {
     width: 70%;
     margin: 0 auto;
     font-size: 1.25rem;
+  }
+
+  #works .modal-content .control {
+    position: static;
+  }
+
+  #works .btns {
+    position: static;
+    margin-left: auto;
+    max-width: 35%;
+  }
+
+  #works .modal-content .head {
+    align-items: flex-start;
   }
 
   #about::before {
