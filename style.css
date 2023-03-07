@@ -47,6 +47,33 @@ main { overflow-x: hidden; }
   flex-direction: column;
 }
 
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(193, 199, 208, 0.95);
+  /* filter: blur(5px); */
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.close-modal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebecf0;
+  color: #67798e;
+  border-radius: 0.25rem;
+  padding: 0.3rem;
+}
+
+.close-modal i { font-size: 1.25rem; }
+
 .sections {
   background-color: #fff;
   display: flex;
@@ -432,6 +459,82 @@ header {
   border-radius: 0.2rem;
 }
 
+#works .modal-container {
+  display: block;
+  width: 65%;
+  margin: 5rem auto 0;
+  background-color: #fff;
+  padding: 2.5rem 1.5rem;
+  max-width: 768px;
+}
+
+#works .modal img {
+  object-fit: cover;
+  width: 100%;
+}
+
+#works .modal-content,
+#works .content
+ {
+  display: flex;
+  flex-direction: column;
+}
+
+#works .modal-content h2::after { display: none; }
+
+#works .modal-content h2 {
+  display: inline;
+  font-size: 1.75rem;
+  max-width: 65%;
+  text-align: left;
+}
+
+#works .modal-content .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+
+#works .btns {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25rem;
+}
+
+#works .btns .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+#works .btns .btn i {
+  font-size: 1rem;
+}
+
+#works .modal-content .control {
+  display: inline-block;
+  margin-left: auto;
+  margin-bottom: 1rem;
+}
+
+#works .modal p {
+  color: #344563;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+}
+
+#works .modal .tags {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 1rem;
+}
+
 /* -------------------------
 ========= About Me =========
 ------------------------- */
@@ -687,6 +790,13 @@ header {
   }
 
   #works h3 { padding: 1rem; }
+
+  #works .modal-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
 
   #about p {
     width: 70%;
