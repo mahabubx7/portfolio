@@ -161,6 +161,18 @@ Deployed in `Github Pages`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Describe 1 - 3 features you will add to the project.
+
+- [:heavy_check_mark:] **[Mobile_menu]**
+- [:heavy_check_mark:] **[Details_popup]**
+- [ ] **[Sticky_header]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
