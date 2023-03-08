@@ -47,6 +47,32 @@ main { overflow-x: hidden; }
   flex-direction: column;
 }
 
+.modal {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(193, 199, 208, 0.95);
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+.close-modal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ebecf0;
+  color: #67798e;
+  border-radius: 0.25rem;
+  padding: 0.3rem;
+}
+
+.close-modal i { font-size: 1.25rem; }
+
 .sections {
   background-color: #fff;
   display: flex;
@@ -432,6 +458,103 @@ header {
   border-radius: 0.2rem;
 }
 
+#works .modal-container {
+  display: block;
+  width: calc(100% - 4.5rem);
+  margin: 2rem auto 0;
+  background-color: #fff;
+  padding: 1.5rem;
+  max-width: 768px;
+}
+
+#works .modal img {
+  object-fit: cover;
+  width: 100%;
+}
+
+#works .modal-content,
+#works .content {
+  display: flex;
+  flex-direction: column;
+}
+
+#works .modal-content {
+  position: relative;
+}
+
+#works .content {
+  position: relative;
+  padding: 0;
+  padding-bottom: 5rem;
+}
+
+.modal h2::after { display: none; }
+
+#works .modal h2 {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+#works .modal-content .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+
+#works .btns {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#works .btns .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  gap: 0.15rem;
+}
+
+#works .btns .btn span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#works .btns i {
+  font-size: 1rem;
+}
+
+#works .modal-content .control {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-left: auto;
+  margin-bottom: 1rem;
+  z-index: 9;
+}
+
+#works .modal p {
+  color: #344563;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+}
+
+#works .modal-content .tags {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 1rem;
+}
+
 /* -------------------------
 ========= About Me =========
 ------------------------- */
@@ -509,7 +632,7 @@ header {
   margin: 2rem auto 1rem;
 }
 
-#about .tags {
+#about .grid .tags {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -551,8 +674,8 @@ header {
   z-index: -1;
 }
 
-#contact h2,
-#contact .btn {
+#contact .container h2,
+#contact #contactForm .btn {
   text-transform: none;
 }
 
@@ -597,12 +720,12 @@ header {
   font-size: 2rem;
 }
 
-#contact .btn {
+#contact #contactForm .btn {
   font-size: 1.25rem;
   padding: 1rem 1.5rem;
 }
 
-#contact > p { color: #42526e; }
+#contact .container p { color: #42526e; }
 
 #names { display: none; }
 
@@ -688,10 +811,39 @@ header {
 
   #works h3 { padding: 1rem; }
 
+  #works .modal-container {
+    position: relative;
+    width: 65%;
+    margin: 2.5rem auto 0;
+    padding: 1rem;
+  }
+
+  #works .modal-content {
+    padding: 0;
+  }
+
+  #works .content {
+    padding: 1.5rem;
+  }
+
   #about p {
     width: 70%;
     margin: 0 auto;
     font-size: 1.25rem;
+  }
+
+  #works .modal-content .control {
+    position: static;
+  }
+
+  #works .btns {
+    position: static;
+    margin-left: auto;
+    max-width: 35%;
+  }
+
+  #works .modal-content .head {
+    align-items: flex-start;
   }
 
   #about::before {
