@@ -32,15 +32,12 @@
 
 # 📖 [Portfolio Website] <a name="about-project"></a>
 
-> This website represents my identity and official personal website.
-
 **[Portfolio Website]** is a static website that carries my professional information and so on.
 
 ## 🛠 Built With <a name="built-with">`HTML/CSS` and `Nodejs`</a>
 
 ### Tech Stack <a name="tech-stack">`HTML/CSS` with `Nodejs`</a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
 
 <details>
   <summary>Client</summary>
@@ -57,8 +54,6 @@
 
 ### Key Features <a name="key-features"></a>
 
-<!-- > Describe between 1-3 key features of the application. -->
-
 - **[Clean and Simple Static Webpages]**
 - **[Only Raw HTML & CSS]**
 - **[Nodejs for development tools]**
@@ -69,8 +64,6 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
 - [Live Demo Link](https://mahabubx7.github.io/portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -78,8 +71,6 @@
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Clone this repository and start making changes. And forget the PR!
 
 To get a local copy up and running, follow these steps.
 
@@ -139,10 +130,21 @@ Testing with Lint-checks:
   npm test
 ```
 
+or, you can test linters for each tech
+```sh
+npm test:html
+```
+```sh
+npm test:styles
+```
+```sh
+npm test:js
+```
 
 ### Deployment
 
 Deployed in `Github Pages`.
+[Live preview](https://mahbaubx7.github.io/portfolio)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,14 +152,22 @@ Deployed in `Github Pages`.
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **Mahabub**
 
 - GitHub: [@mahabubx7](https://github.com/mahabubx7)
 - Twitter: [@mahabub__7](https://twitter.com/mahabub__7)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/mahabubx7)
 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [:heavy_check_mark:] **[Mobile_menu]**
+- [:heavy_check_mark:] **[Details_popup]**
+- [ ] **[Sticky_header]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -211,7 +221,5 @@ I would like to thank the `microverse` team for this nice ui (figma).
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
