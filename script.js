@@ -163,3 +163,66 @@ function interactions() {
 }
 
 interactions(); // scripts setting up
+
+// validation for contact form
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  let hasError = false;
+
+  const fullName = document.querySelector('input[name="full_name"]').value;
+  const fname = document.querySelector('#names input[name="first_name"]').value;
+  const lname = document.querySelector('#names input[name="last_name"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const message = document.querySelector('textarea[name="message"]').value;
+  let finalName = '';
+
+  function checkField(str) {
+    if (!str || typeof (str) !== 'string' || str.length < 3) {
+      hasError = true;
+    } else if (str.length < 3) {
+      hasError = true;
+    }
+  }
+
+  function checkEmail(str) {
+    return str === str.toLowerCase();
+  }
+
+  if (fullName) {
+    checkField(fullName);
+    finalName = fullName;
+  } else if (!fullName && (!fname || !lname)) {
+    hasError = true;
+  } else if (!fullName && fname && lname) {
+    checkField(fname);
+    checkField(lname);
+    if (!hasError) {
+      finalName = `${fname} ${lname}`;
+    }
+  }
+
+  const formInfo = {
+    name: finalName,
+    email,
+    feedback: message,
+  };
+
+  if (!hasError && checkEmail(formInfo.email)) {
+    const sent = document.createElement('p');
+    sent.innerText = 'Form is sent.';
+    sent.classList.add('success');
+    if (sent.classList.contains('error')) {
+      sent.classList.remove('error');
+    }
+    form.appendChild(sent);
+    form.submit();
+  } else {
+    const error = document.createElement('p');
+    error.innerText = 'Error! Form not sent.';
+    error.classList.add('error');
+    form.appendChild(error);
+  }
+});
