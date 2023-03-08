@@ -564,7 +564,6 @@ header {
   font-size: 0.9rem;
   line-height: 1.6rem;
   text-align: left;
-
 }
 
 #works .modal-content .tags {
@@ -833,7 +832,6 @@ header {
 
   #works .modal-container {
     position: relative;
-
     width: 80%;
     margin: 2.5rem auto 2rem;
     padding: 1rem;
