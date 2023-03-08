@@ -73,6 +73,22 @@ main { overflow-x: hidden; }
 
 .close-modal i { font-size: 1.25rem; }
 
+p.error {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: orangered !important;
+  margin-bottom: 1rem;
+  padding-top: 0;
+}
+
+p.success {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: green !important;
+  margin-bottom: 1rem;
+  padding-top: 0;
+}
+
 .sections {
   background-color: #fff;
   display: flex;

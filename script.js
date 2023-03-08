@@ -164,30 +164,63 @@ function interactions() {
 
 interactions(); // scripts setting up
 
-
 // validation for contact form
 const form = document.getElementById('contactForm');
 
-function checkEmail(str) {
-  return typeof(str) === 'string' && str === str.toLowerCase();
-}
-
-let formData = {};
-
-form.addEventListener('submit', (event) => {
+form.addEventListener('submit', async (event) => {
   event.preventDefault();
-  formData = Object.assign({
-    name: event.currentTarget.name.value || '',
-    email: event.currentTarget.email.value || '',
-    feedback: event.currentTarget.feedback.value || '',
-  });
 
-  if (checkEmail(formData['email'])) {
+  let hasError = false;
+
+  const flname = document.querySelector('input[name="full_name"]').value;
+  const fname = document.querySelector('input[name="first_name"]').value;
+  const lname = document.querySelector('input[name="last_name"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const message = document.querySelector('textarea[name="message"]').value;
+  let finalName = '';
+
+  function checkFields(str) {
+    if (!str || typeof (str) !== 'string' || str.length < 7) {
+      hasError = true;
+    } else if (str.length < 3) {
+      hasError = true;
+    }
+  }
+
+  function checkEmail(str) {
+    console.log(str, ' === ', str.toLowerCase());
+    return str === str.toLowerCase();
+  }
+
+  if (flname) {
+    checkFields(flname);
+    finalName = flname;
+  } else if (fname && lname) {
+    checkFields(fname);
+    checkFields(lname);
+    if (!hasError) {
+      finalName = `${fname} ${lname}`;
+    }
+  }
+
+  const formInfo = {
+    name: finalName,
+    email,
+    feedback: message,
+  };
+
+  if (!hasError && checkEmail(formInfo.email)) {
+    const sent = document.createElement('p');
+    sent.innerText = 'Form is sent.';
+    sent.classList.add('success');
+    if (sent.classList.contains('error')) {
+      sent.classList.remove('error');
+    }
+    form.appendChild(sent);
     form.submit();
   } else {
-    // console.log("Error!", formData);
     const error = document.createElement('p');
-    error.innerText = "Invalid Email Address!";
+    error.innerText = 'Error! Form not sent.';
     error.classList.add('error');
     form.appendChild(error);
   }
