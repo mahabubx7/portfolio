@@ -919,6 +919,16 @@ header {
     display: none;
   }
 
+  #contact .success,
+  #contact .error {
+    display: block;
+    text-align: left;
+  }
+
+  #contact input[name="full_name"] {
+    visibility: hidden;
+  }
+
   #contact .btn-link {
     margin-left: 0;
   }
