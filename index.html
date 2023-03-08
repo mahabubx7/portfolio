@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>Mahabub's Portfolio: Personal Portfolio Website</title>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,11 +31,24 @@
 
       <!-- Primary Menu -->
       <nav id="menu">
+        <!-- Desktop Menu-->
         <ul class="desktop-menu">
-          <li><a href="#">portfolio</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="#works">portfolio</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul> <!--//Desktop Menu-->
+        <!-- Mobile Menu-->
+        <ul class="mobile-menu d-none" id="mobile-menu">
+          <li class="mobile-control">
+            <button id="close-menu">
+              <i class="ri-close-line"></i>
+            </button>
+          </li>
+          <li><a href="#works">portfolio</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
+        <!--//Mobile Menu-->
       </nav> <!-- //Primary Menu -->
     </div>
   </header> <!-- //Header -->
@@ -45,7 +58,7 @@
     <section id="headline">
       <div class="container">
         <h1>
-          <span class="line1">Hey there. I'm Alex.</span>
+          <span class="line1">Hey there. I'm Mahabub.</span>
           <span class="line2">I'm a software developer</span>
         </h1>
         <p>
@@ -53,14 +66,14 @@
           don't hesitate to contact me.
         </p>
         <ul class="social-links">
-          <li><a href="#"><i class="ri-github-fill"></i></a></li>
-          <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
-          <li><a href="#"><i class="fa fa-angellist"></i></a></li>
-          <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
-          <li><a href="#"><i class="ri-medium-line"></i></a></li>
+          <li><a href="https://github.com/mahabubx7" target="_blank" rel="noopener"><i class="ri-github-fill"></i></a></li>
+          <li><a href="https://linkedin.com/in/mahabubx7" target="_blank" rel="noopener"><i class="ri-linkedin-fill"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-angellist" rel="noopener"></i></a></li>
+          <li><a href="https://twitter.com/mahabub__7" target="_blank" rel="noopener"><i class="ri-twitter-fill"></i></a></li>
+          <li><a href="#" target="_blank"><i class="ri-medium-line" rel="noopener"></i></a></li>
         </ul>
         <div class="scroller-down">
-          <a href="#" id="scroll-down">
+          <a href="#about" id="scroll-down">
             <i class="ri-arrow-down-s-line"></i>
           </a>
         </div>
@@ -235,25 +248,47 @@
       </div>
     </section> <!-- //About Me -->
 
+    <!-- Contact Me -->
     <section id="contact" class="sections">
       <div class="container">
         <h2>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</h2>
+        <!-- Contact Form -->
         <form action="https://formspree.io/f/moqzdlze" id="contactForm" method="POST">
-          <input type="text" name="full_name" placeholder="Full name" required maxlength="30">
-          <input type="email" name="email" placeholder="Email address" required>
-          <textarea name="message" id="contactMsg" maxlength="500" cols="30" rows="10" placeholder="Enter text here" required></textarea>
+          <fieldset id="names">
+            <input type="text" name="first_name" placeholder="First name (*)" required maxlength="30">
+            <input type="text" name="last_name" placeholder="Last name (*)" required maxlength="30">
+          </fieldset>
+          <input type="text" id="full_name" name="full_name" placeholder="Full name (*)" required maxlength="30">
+          <input type="email" name="email" placeholder="Email address (*)" required>
+          <textarea name="message" id="contactMsg" maxlength="500" cols="30" rows="5" placeholder="Enter text here (*)" required></textarea>
           <button type="submit" class="btn btn-link">Get in touch</button>
-        </form>
+        </form> <!-- //Contact Form -->
         <ul class="social-links">
-          <li><a href="#"><i class="ri-github-fill"></i></a></li>
-          <li><a href="#"><i class="ri-linkedin-fill"></i></a></li>
-          <li><a href="#"><i class="fa fa-angellist"></i></a></li>
-          <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
-          <li><a href="#"><i class="ri-medium-line"></i></a></li>
+          <li><a href="https://github.com/mahabubx7" target="_blank" rel="noopener"><i class="ri-github-fill"></i></a></li>
+          <li><a href="https://linkedin.com/in/mahabubx7" target="_blank" rel="noopener"><i class="ri-linkedin-fill"></i></a></li>
+          <li><a href="#" target="_blank"><i class="fa fa-angellist" rel="noopener"></i></a></li>
+          <li><a href="https://twitter.com/mahabub__7" target="_blank" rel="noopener"><i class="ri-twitter-fill"></i></a></li>
+          <li><a href="#" target="_blank"><i class="ri-medium-line" rel="noopener"></i></a></li>
         </ul>
-        <p>myemailhere@email.com</p>
+        <p>mahabubx7@gmail.com</p>
       </div>
-    </section>
+
+      <span id="bg-element"></span>
+    </section> <!-- //Contact Me -->
   </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <ul class="social-links">
+      <li><a href="https://github.com/mahabubx7" target="_blank" rel="noopener"><i class="ri-github-fill"></i></a></li>
+      <li><a href="https://linkedin.com/in/mahabubx7" target="_blank" rel="noopener"><i class="ri-linkedin-fill"></i></a></li>
+      <li><a href="#" target="_blank"><i class="fa fa-angellist" rel="noopener"></i></a></li>
+      <li><a href="https://twitter.com/mahabub__7" target="_blank" rel="noopener"><i class="ri-twitter-fill"></i></a></li>
+      <li><a href="#" target="_blank"><i class="ri-medium-line" rel="noopener"></i></a></li>
+    </ul>
+  </footer> <!-- //Footer -->
+
+  <!-- Script: JS -->
+  <script src="./script.js"></script>
 </body>
 </html>
