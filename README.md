@@ -130,10 +130,21 @@ Testing with Lint-checks:
   npm test
 ```
 
+or, you can test linters for each tech
+```sh
+npm test:html
+```
+```sh
+npm test:styles
+```
+```sh
+npm test:js
+```
 
 ### Deployment
 
 Deployed in `Github Pages`.
+[Live preview](https://mahbaubx7.github.io/portfolio)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
