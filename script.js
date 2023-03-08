@@ -172,15 +172,15 @@ form.addEventListener('submit', async (event) => {
 
   let hasError = false;
 
-  const flname = document.querySelector('input[name="full_name"]').value;
-  const fname = document.querySelector('input[name="first_name"]').value;
-  const lname = document.querySelector('input[name="last_name"]').value;
+  const fullName = document.querySelector('input[name="full_name"]').value;
+  const fname = document.querySelector('#names input[name="first_name"]').value;
+  const lname = document.querySelector('#names input[name="last_name"]').value;
   const email = document.querySelector('input[name="email"]').value;
   const message = document.querySelector('textarea[name="message"]').value;
   let finalName = '';
 
-  function checkFields(str) {
-    if (!str || typeof (str) !== 'string' || str.length < 7) {
+  function checkField(str) {
+    if (!str || typeof (str) !== 'string' || str.length < 3) {
       hasError = true;
     } else if (str.length < 3) {
       hasError = true;
@@ -188,16 +188,17 @@ form.addEventListener('submit', async (event) => {
   }
 
   function checkEmail(str) {
-    console.log(str, ' === ', str.toLowerCase());
     return str === str.toLowerCase();
   }
 
-  if (flname) {
-    checkFields(flname);
-    finalName = flname;
-  } else if (fname && lname) {
-    checkFields(fname);
-    checkFields(lname);
+  if (fullName) {
+    checkField(fullName);
+    finalName = fullName;
+  } else if (!fullName && (!fname || !lname)) {
+    hasError = true;
+  } else if (!fullName && fname && lname) {
+    checkField(fname);
+    checkField(lname);
     if (!hasError) {
       finalName = `${fname} ${lname}`;
     }
