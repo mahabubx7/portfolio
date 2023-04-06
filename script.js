@@ -2,52 +2,20 @@
 // store of projects
 const projects = [
   {
-    image: 'assets/Snapshoot Portfolio.png',
-    name: 'multi-post stories gain+glory',
-    preview: '',
-    code: '',
-    tags: ['Html', 'CSS', 'Ruby on Rails'],
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    image: 'assets/img/todo-list.png',
+    name: 'ToDo list web-application',
+    preview: 'https://mahabubx7.github.io/todo-list/dist/',
+    code: 'https://github.com/mahabubx7/todo-list',
+    tags: ['Html', 'CSS', 'JavaScript', 'Webpack'],
+    description: 'ToDo-list web-app is made with modern javascript and webpack bundler. This app is executable in browsers. We can create, update, remove and manage tasks with it.',
   },
   {
-    image: 'assets/Snapshoot Portfolio.png',
-    name: 'multi-post stories gain+glory',
-    preview: '',
-    code: '',
-    tags: ['Html', 'CSS', 'Ruby on Rails'],
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-  },
-  {
-    image: 'assets/Snapshoot Portfolio.png',
-    name: 'multi-post stories gain+glory',
-    preview: '',
-    code: '',
-    tags: ['Html', 'CSS', 'Ruby on Rails'],
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-  },
-  {
-    image: 'assets/Snapshoot Portfolio.png',
-    name: 'multi-post stories gain+glory',
-    preview: '',
-    code: '',
-    tags: ['Html', 'CSS', 'Ruby on Rails'],
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-  },
-  {
-    image: 'assets/Snapshoot Portfolio.png',
-    name: 'multi-post stories gain+glory',
-    preview: '',
-    code: '',
-    tags: ['Html', 'CSS', 'Ruby on Rails'],
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-  },
-  {
-    image: 'assets/Snapshoot Portfolio.png',
-    name: 'multi-post stories gain+glory',
-    preview: '',
-    code: '',
-    tags: ['Html', 'CSS', 'Ruby on Rails'],
-    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    image: 'assets/img/capstone-project-1.png',
+    name: 'Startup Society Dhaka Summit 2023',
+    preview: 'https://mahabubx7.github.io/capstone-project-1/',
+    code: 'https://github.com/mahabubx7/capstone-project-1',
+    tags: ['Html', 'SCSS', 'JavaScript'],
+    description: 'This is a conference event based website made with static-stack and used for online presence with event join invitations',
   },
 ];
 
@@ -59,21 +27,21 @@ projects.map((project) => {
   const content = document.createElement('div');
   content.innerHTML = `
   <div class="image">
-    <!-- <img src="${project.image}" alt="${project.name}" /> -->
+    <img src="${project.image}" alt="${project.name}" />
   </div>
    <div class="work-info">
      <h3>${project.name}</h3>
-     <ul class="tags">
-       <li>Ruby on Rails</li>
-       <li>CSS</li>
-       <li>JavaScript</li>
-       <li>Html</li>
-     </ul>
+     <ul class="tags"></ul>
      <div class="btn-container">
         <a href="${project.preview}" class="btn-preview btn-project">see project</a>
      </div>
   </div>
   `;
+  project.tags.forEach((tag) => {
+    const newTag = document.createElement('li');
+    newTag.innerHTML = `${tag}`;
+    content.querySelector('ul.tags').appendChild(newTag);
+  });
   const modal = document.createElement('div');
   modal.classList.add('modal');
   modal.classList.add('d-none');
@@ -87,8 +55,7 @@ projects.map((project) => {
       <div class="content">
         <img src="${project.image}" alt="${project.name}">
         <div class="head">
-          <h2>Keeping track of hundreds of
-            components</h2>
+          <h2>${project.name}</h2>
           <div class="btns">
             <a href="${project.preview}" class="btn btn-link">
               <span>see live</span>
@@ -100,20 +67,17 @@ projects.map((project) => {
             </a>
           </div>
         </div>
-        <ul class="tags">
-          <li>Codekit</li>
-          <li>GitHub</li>
-          <li>Javascript</li>
-          <li>Bootstrap</li>
-          <li>Terminal</li>
-          <li>Codepen</li>
-        </ul>
+        <ul class="tags"></ul>
         <p class="description">${project.description}</p>
       </div>
     </div>
   </div>
   `;
-
+  project.tags.forEach((tag) => {
+    const newTag = document.createElement('li');
+    newTag.innerHTML = `${tag}`;
+    modalContent.querySelector('ul.tags').appendChild(newTag);
+  });
   modal.appendChild(modalContent);
   item.appendChild(content);
   item.appendChild(modal);

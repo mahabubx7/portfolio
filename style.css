@@ -32,6 +32,11 @@ a { text-decoration: none; }
 
 main { overflow-x: hidden; }
 
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
 .container {
   max-width: 1140px;
   width: calc(100% - 1rem);
