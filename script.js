@@ -27,6 +27,11 @@ const projects = [
   },
 ];
 
+// logo
+document.querySelector('.logo').innerText = `
+  <mahabub/>
+`;
+
 // create projects dynamically
 const projectContainer = document.getElementById('projects');
 projects.map((project) => {
@@ -105,7 +110,9 @@ projects.map((project) => {
   });
 });
 
-// mobile menu
+// Menu
+const menu = document.querySelector('#menu');
+const toolbar = document.querySelector('#toolbar');
 const mobileMenu = document.getElementById('mobile-menu');
 const menuItems = document.querySelectorAll('#mobile-menu a');
 const hamberger = document.getElementById('hamberger');
@@ -120,9 +127,22 @@ function closeMenu() {
 
 // all-interaction-scripts
 function interactions() {
+  window.addEventListener('scroll', () => {
+    // add sticky menu effects
+    if (window.scrollY >= 120) {
+      menu.classList.add('sticky-effect');
+      toolbar.classList.add('sticky-effect', 'sticky-toolbar');
+      //
+    } else {
+      menu.classList.remove('sticky-effect');
+      toolbar.classList.remove('sticky-effect', 'sticky-toolbar');
+    }
+  });
+
   // mobile menu
   hamberger.addEventListener('click', () => {
     mobileMenu.classList.remove('d-none');
+    mobileMenu.classList.add('sticky-effect');
   });
 
   menuItems.forEach((item) => {

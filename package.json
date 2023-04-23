@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mahabubx7/portfolio.git"
+    "url": "git+https://github.com/mahabubx7/mahabubx7.github.io.git"
   },
   "keywords": [],
-  "author": "Mahabub <mahabubx7@gmail.com>",
+  "author": "Mahabub Alam <mahabubx7@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mahabubx7/portfolio/issues"
+    "url": "https://github.com/mahabubx7/mahabubx7.github.io/issues"
   },
-  "homepage": "https://github.com/mahabubx7/portfolio#readme",
+  "homepage": "https://mahabubx7.github.io",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
