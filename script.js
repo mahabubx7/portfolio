@@ -6,7 +6,7 @@ const projects = [
     name: 'Food Hobbies',
     preview: 'https://mahabubx7.github.io/js-capstone/',
     code: 'https://github.com/mahabubx7/js-capstone',
-    tags: ['Html', 'SCSS', 'JavaScript', Webpack],
+    tags: ['Html', 'SCSS', 'JavaScript', 'Webpack'],
     description: 'The JavaScript capstone project is about building your own web application based on an external API.',
   },
   {
