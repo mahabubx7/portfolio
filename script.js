@@ -2,12 +2,12 @@
 // store of projects
 const projects = [
   {
-    image: 'assets/img/todo-list.png',
-    name: 'ToDo list web-application',
-    preview: 'https://mahabubx7.github.io/todo-list/dist/',
-    code: 'https://github.com/mahabubx7/todo-list',
-    tags: ['Html', 'CSS', 'JavaScript', 'Webpack'],
-    description: 'ToDo-list web-app is made with modern javascript and webpack bundler. This app is executable in browsers. We can create, update, remove and manage tasks with it.',
+    image: 'assets/img/js-capstone.png',
+    name: 'Food Hobbies',
+    preview: 'https://mahabubx7.github.io/js-capstone/',
+    code: 'https://github.com/mahabubx7/js-capstone',
+    tags: ['Html', 'SCSS', 'JavaScript', 'Webpack'],
+    description: 'The JavaScript capstone project is about building your own web application based on an external API.',
   },
   {
     image: 'assets/img/capstone-project-1.png',
@@ -16,6 +16,14 @@ const projects = [
     code: 'https://github.com/mahabubx7/capstone-project-1',
     tags: ['Html', 'SCSS', 'JavaScript'],
     description: 'This is a conference event based website made with static-stack and used for online presence with event join invitations',
+  },
+  {
+    image: 'assets/img/todo-list.png',
+    name: 'ToDo list web-application',
+    preview: 'https://mahabubx7.github.io/todo-list/dist/',
+    code: 'https://github.com/mahabubx7/todo-list',
+    tags: ['Html', 'CSS', 'JavaScript', 'Webpack'],
+    description: 'ToDo-list web-app is made with modern javascript and webpack bundler. This app is executable in browsers. We can create, update, remove and manage tasks with it.',
   },
 ];
 
